@@ -61,35 +61,30 @@
             "xxxxxxx": ""
         },
         "airport_discovery": {
-            "enable": true,
-            "channel": "jichang_list",
-            "pages": 50,
-            "rigid": true,
-            "chuck": false,
-            "push_to": [
-                "MyProxies"
-            ],
-            "persist": {
-                "domains": "discovered-airports.txt"
-            }
-        },
-        "telegram": {
-    "enable": true,
-    "pages": 50,
-    "exclude": "",
-    "users": {
-        "jichang_list": {
-            "include": "",
-            "exclude": "",
-            "config": {
-                "rename": "",
-                "xxxxxx": ""
-            },
-            "push_to": [
-                "MyProxies"
-            ]
-        }
+  "enable": true,
+  "channel": "jichang_list",
+  "pages": 50,
+  "rigid": true,
+  "chuck": false,
+  "push_to": ["MyProxies"],
+  "persist": { "domains": "discovered-airports.txt" }
+},
+"telegram": {
+  "enable": true,
+  "pages": 50,
+  "exclude": "过期|维护",
+  "users": {
+    "jichang_list": {
+      "include": "",
+      "exclude": "",
+      "push_to": ["MyProxies"]
+    },
+    "sub_store": {
+      "include": "",
+      "exclude": "",
+      "push_to": ["MyProxies"]
     }
+  }
 },
         "google": {
             "enable": false,
