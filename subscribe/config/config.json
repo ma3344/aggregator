@@ -74,23 +74,23 @@
             }
         },
         "telegram": {
-            "enable": true,
-            "pages": 50,
+    "enable": true,
+    "pages": 50,
+    "exclude": "",
+    "users": {
+        "jichang_list": {
+            "include": "",
             "exclude": "",
-            "users": {
-                "channel": {
-                    "include": "",
-                    "exclude": "",
-                    "config": {
-                        "rename": "",
-                        "xxxxxx": ""
-                    },
-                    "push_to": [ 
-                        "MyProxies"
-                ]
-                }
-            }
-        },
+            "config": {
+                "rename": "",
+                "xxxxxx": ""
+            },
+            "push_to": [
+                "MyProxies"
+            ]
+        }
+    }
+},
         "google": {
             "enable": false,
             "exclude": "",
