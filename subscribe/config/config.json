@@ -185,33 +185,33 @@
         "domain": "https://gist.github.com",
         "items": {
             "MyClashProfile": {
-                "username": "losnow123",
-                "gistid": "7245e5c464b3a0eca9fff8970addb977",
+                "username": "ma3344",
+                "gistid": "977bb8e693897f402077a6bc792b8509",
                 "filename": "clash.yaml"
             },
             "MySingboxProfile": {
-                "username": "losnow123",
-                "gistid": "7245e5c464b3a0eca9fff8970addb977",
+                "username": "ma3344",
+                "gistid": "977bb8e693897f402077a6bc792b8509",
                 "filename": "singbox.json"
             },
             "MyV2rayProfile": {
-                "username": "losnow123",
-                "gistid": "7245e5c464b3a0eca9fff8970addb977",
+                "username": "ma3344",
+                "gistid": "977bb8e693897f402077a6bc792b8509",
                 "filename": "v2ray.txt"
             },
             "crawledsubs": {
-                "username": "losnow123",
-                "gistid": "7245e5c464b3a0eca9fff8970addb977",
+                "username": "ma3344",
+                "gistid": "977bb8e693897f402077a6bc792b8509",
                 "filename": "crawled-subs.txt"
             },
             "crawledproxies": {
-                "username": "losnow123",
-                "gistid": "7245e5c464b3a0eca9fff8970addb977",
+                "username": "ma3344",
+                "gistid": "977bb8e693897f402077a6bc792b8509",
                 "filename": "crawled-proxies.yaml"
             },
             "discovered-airports.txt": {
-                "username": "losnow123",
-                "gistid": "7245e5c464b3a0eca9fff8970addb977",
+                "username": "ma3344",
+                "gistid": "977bb8e693897f402077a6bc792b8509",
                 "filename": "discovered-airports.txt"
             }
         }
