@@ -78,7 +78,7 @@
             "pages": 50,
             "exclude": "",
             "users": {
-                "channel": "jichang_list", {
+                "channel": {
                     "include": "",
                     "exclude": "",
                     "config": {
