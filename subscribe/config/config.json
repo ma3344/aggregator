@@ -180,7 +180,7 @@
     },
     "storage": {
         "engine": "gist",
-        "token": "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",
+        "token": "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",
         "base": "https://api.github.com",
         "domain": "https://gist.github.com",
         "items": {
