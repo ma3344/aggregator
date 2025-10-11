@@ -75,10 +75,10 @@
         },
         "telegram": {
             "enable": true,
-            "pages": 40,
+            "pages": 50,
             "exclude": "",
             "users": {
-                "channel": "jichang_list"，{
+                "channel": "jichang_list"， {
                     "include": "",
                     "exclude": "",
                     "config": {
