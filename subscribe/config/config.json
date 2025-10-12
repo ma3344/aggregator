@@ -63,7 +63,7 @@
         "airport_discovery": {
   "enable": true,
   "channel": "jichang_list",
-  "pages": 50,
+  "pages": 30,
   "rigid": true,
   "chuck": false,
   "push_to": ["MyProxies"],
@@ -71,7 +71,7 @@
 },
 "telegram": {
   "enable": true,
-  "pages": 50,
+  "pages": 30,
   "exclude": "过期|维护",
   "users": {
     "jichang_list": {
@@ -94,7 +94,7 @@
         },
         "github": {
             "enable": true,
-            "pages": 50,
+            "pages": 30,
             "push_to": [
                 "MyProxies"
             ],
