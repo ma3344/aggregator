@@ -1,278 +1,288 @@
 {
-  "domains": [
-    {
-      "name": "MyPrivateSub",
-      "sub": [
-        "https://example.com/your/private/sub/link"
-      ],
-      "domain": "",
-      "enable": false,
-      "rename": "",
+    "domains": [
+        {
+            "name": "MyPrivateSub_Placeholder",
+            "sub": [
+                "https://example.com/your/private/sub/link"
+            ],
+            "domain": "",
+            "enable": false,
+            "rename": "",
+            "include": "",
+            "exclude": "",
+            "push_to": [
+                "MyProxies"
+            ],
+            "ignorede": true,
+            "liveness": true,
+            "rate": 2.5,
+            "count": 1,
+            "coupon": "",
+            "secure": false,
+            "renew": {
+                "account": [
+                    {
+                        "email": "",
+                        "passwd": "",
+                        "ticket": {
+                            "enable": true,
+                            "autoreset": false,
+                            "subject": "",
+                            "message": "",
+                            "level": 1
+                        }
+                    }
+                ],
+                "plan_id": 3,
+                "package": "",
+                "method": 1,
+                "coupon_code": "",
+                "chatgpt": {
+                    "enable": true,
+                    "regex": "",
+                    "operate": "IN"
+                }
+            }
+        }
+    ],
+    "crawl": {
+        "enable": true,
+        "exclude": "过期|停用|维护",
+        "threshold": 5,
+        "singlelink": true,
+        "persist": {
+            "subs": "crawledsubs",
+            "proxies": "crawledproxies"
+        },
+        "config": {
+            "rename": "",
+            "include": "",
+            "exclude": "",
+            "xxxxxxx": ""
+        },
+        "airport_discovery": {
+  "enable": true,
+  "channel": "jichang_list",
+  "pages": 30,
+  "rigid": true,
+  "chuck": false,
+  "push_to": ["MyProxies"],
+  "persist": { "domains": "discovered-airports.txt" }
+},
+"telegram": {
+  "enable": true,
+  "pages": 20,
+  "exclude": "过期|维护",
+  "users": {
+    "jichang_list": {
       "include": "",
       "exclude": "",
-      "push_to": ["MyProxies"],
-      "ignorede": true,
-      "liveness": true,
-      "rate": 2.5,
-      "count": 1,
-      "coupon": "",
-      "secure": false,
-      "renew": {
-        "account": [
-          {
-            "email": "",
-            "passwd": "",
-            "ticket": {
-              "enable": false,
-              "autoreset": false,
-              "subject": "",
-              "message": "",
-              "level": 1
-            }
-          }
-        ],
-        "plan_id": 0,
-        "package": "",
-        "method": 0,
-        "coupon_code": "",
-        "chatgpt": {
-          "enable": false,
-          "regex": "",
-          "operate": "IN"
-        }
-      }
-    }
-  ],
-  "crawl": {
-    "enable": true,
-    "exclude": "过期|维护|失效",
-    "threshold": 5,
-    "singlelink": true,
-    "persist": {
-      "subs": "crawledsubs",
-      "proxies": "crawledproxies"
+      "push_to": ["MyProxies"]
     },
-
-    "airport_discovery": {
-      "enable": true,
-      "channel": "jichang_list",
-      "pages": 30,
-      "rigid": true,
-      "chuck": false,
-      "push_to": ["MyProxies"],
-      "persist": { "domains": "discovered-airports.txt" }
-    },
-
-    "telegram": {
-      "enable": true,
-      "pages": 20,
-      "exclude": "过期|维护|失效",
-      "users": {
-        "jichang_list": {
-          "include": "",
-          "exclude": "",
-          "push_to": ["MyProxies"]
-        },
-        "sub_store": {
-          "include": "",
-          "exclude": "",
-          "push_to": ["MyProxies"]
-        },
-        "v2raydaily": {
-          "include": "",
-          "exclude": "",
-          "push_to": ["MyProxies"]
-        },
-        "ClashNodeShare": {
-          "include": "",
-          "exclude": "",
-          "push_to": ["MyProxies"]
-        },
-        "ProxyShareCN": {
-          "include": "",
-          "exclude": "",
-          "push_to": ["MyProxies"]
-        }
-      }
-    },
-
-    "google": {
-      "enable": false,
+    "sub_store": {
+      "include": "",
       "exclude": "",
-      "notinurl": [],
-      "push_to": []
-    },
-
-    "github": {
-      "enable": true,
-      "pages": 20,
-      "push_to": ["MyProxies"],
-      "exclude": "过期|维护|失效",
-      "spams": [],
-      "repositories": [
-        {
-          "enable": true,
-          "username": "aiboboxx",
-          "repo_name": "clashfree",
-          "commits": 3,
-          "exclude": "",
-          "push_to": ["MyProxies"]
-        },
-        {
-          "enable": true,
-          "username": "freefq",
-          "repo_name": "free",
-          "commits": 3,
-          "exclude": "",
-          "push_to": ["MyProxies"]
-        },
-        {
-          "enable": true,
-          "username": "oslook",
-          "repo_name": "clash-freenode",
-          "commits": 3,
-          "exclude": "",
-          "push_to": ["MyProxies"]
-        },
-        {
-          "enable": true,
-          "username": "Pawdroid",
-          "repo_name": "Free-Servers",
-          "commits": 3,
-          "exclude": "",
-          "push_to": ["MyProxies"]
-        },
-        {
-          "enable": true,
-          "username": "ermaozi",
-          "repo_name": "get_subscribe",
-          "commits": 3,
-          "exclude": "",
-          "push_to": ["MyProxies"]
-        },
-        {
-          "enable": true,
-          "username": "mahdibland",
-          "repo_name": "V2RayAggregator",
-          "commits": 3,
-          "exclude": "",
-          "push_to": ["MyProxies"]
-        }
-      ]
-    },
-
-    "twitter": {
-      "enable": false,
-      "users": {}
-    },
-
-    "pages": [
-      {
-        "enable": true,
-        "url": "https://freefq.com/v2ray.html",
-        "include": "",
-        "exclude": "过期|维护|失效",
-        "config": { "rename": "" },
-        "push_to": ["MyProxies"]
-      },
-      {
-        "enable": true,
-        "url": "https://clashgithub.com/",
-        "include": "",
-        "exclude": "过期|维护|失效",
-        "config": { "rename": "" },
-        "push_to": ["MyProxies"]
-      },
-      {
-        "enable": true,
-        "url": "https://nodefree.org/",
-        "include": "",
-        "exclude": "过期|维护|失效",
-        "config": { "rename": "" },
-        "push_to": ["MyProxies"]
-      },
-      {
-        "enable": true,
-        "url": "https://v2rayse.com/free-nodes/",
-        "include": "",
-        "exclude": "过期|维护|失效",
-        "config": { "rename": "" },
-        "push_to": ["MyProxies"]
-      },
-      {
-        "enable": true,
-        "url": "https://v2rayshare.com/",
-        "include": "",
-        "exclude": "过期|维护|失效",
-        "config": { "rename": "" },
-        "push_to": ["MyProxies"]
-      },
-      {
-        "enable": true,
-        "url": "https://freeclashnode.com/",
-        "include": "",
-        "exclude": "过期|维护|失效",
-        "config": { "rename": "" },
-        "push_to": ["MyProxies"]
-      }
-    ],
-
-    "scripts": []
-  },
-
-  "groups": {
-    "MyProxies": {
-      "emoji": true,
-      "list": true,
-      "targets": {
-        "clash": "MyClashProfile",
-        "singbox": "MySingboxProfile",
-        "v2ray": "MyV2rayProfile"
-      },
-      "regularize": {
-        "enable": true,
-        "locate": true,
-        "bits": 2
-      }
-    }
-  },
-
-  "storage": {
-    "engine": "gist",
-    "token": "", 
-    "base": "https://api.github.com",
-    "domain": "https://gist.github.com",
-    "items": {
-      "MyClashProfile": {
-        "username": "ma3344",
-        "gistid": "977bb8e693897f402077a6bc792b8509",
-        "filename": "clash.yaml"
-      },
-      "MySingboxProfile": {
-        "username": "ma3344",
-        "gistid": "977bb8e693897f402077a6bc792b8509",
-        "filename": "singbox.json"
-      },
-      "MyV2rayProfile": {
-        "username": "ma3344",
-        "gistid": "977bb8e693897f402077a6bc792b8509",
-        "filename": "v2ray.txt"
-      },
-      "crawledsubs": {
-        "username": "ma3344",
-        "gistid": "977bb8e693897f402077a6bc792b8509",
-        "filename": "crawled-subs.txt"
-      },
-      "crawledproxies": {
-        "username": "ma3344",
-        "gistid": "977bb8e693897f402077a6bc792b8509",
-        "filename": "crawled-proxies.yaml"
-      },
-      "discovered-airports.txt": {
-        "username": "ma3344",
-        "gistid": "977bb8e693897f402077a6bc792b8509",
-        "filename": "discovered-airports.txt"
-      }
+      "push_to": ["MyProxies"]
     }
   }
+},
+        "google": {
+            "enable": false,
+            "exclude": "",
+            "notinurl": [],
+            "push_to": []
+        },
+          "github": {
+  "enable": true,
+  "pages": 20,
+  "push_to": ["MyProxies"],
+  "exclude": "",
+  "spams": [],
+  "repositories": [
+    {
+      "enable": true,
+      "username": "aiboboxx",
+      "repo_name": "clashfree",
+      "commits": 3,
+      "exclude": "",
+      "push_to": ["MyProxies"]
+    },
+    {
+      "enable": true,
+      "username": "freefq",
+      "repo_name": "free",
+      "commits": 3,
+      "exclude": "",
+      "push_to": ["MyProxies"]
+    },
+    {
+      "enable": true,
+      "username": "oslook",
+      "repo_name": "clash-freenode",
+      "commits": 3,
+      "exclude": "",
+      "push_to": ["MyProxies"]
+    },
+    {
+      "enable": true,
+      "username": "Pawdroid",
+      "repo_name": "Free-Servers",
+      "commits": 3,
+      "exclude": "",
+      "push_to": ["MyProxies"]
+    },
+    {
+      "enable": true,
+      "username": "ermaozi",
+      "repo_name": "get_subscribe",
+      "commits": 3,
+      "exclude": "",
+      "push_to": ["MyProxies"]
+    },
+    {
+      "enable": true,
+      "username": "mahdibland",
+      "repo_name": "V2RayAggregator",
+      "commits": 3,
+      "exclude": "",
+      "push_to": ["MyProxies"]
+    },
+    {
+      "enable": true,
+      "username": "vernesong",
+      "repo_name": "OpenClash",
+      "commits": 3,
+      "exclude": "",
+      "push_to": ["MyProxies"]
+    },
+    {
+      "enable": true,
+      "username": "rayxiao",
+      "repo_name": "Free-V2Ray-SSR",
+      "commits": 3,
+      "exclude": "",
+      "push_to": ["MyProxies"]
+    },
+    {
+      "enable": true,
+      "username": "tindy2013",
+      "repo_name": "subconverter",
+      "commits": 3,
+      "exclude": "",
+      "push_to": ["MyProxies"]
+    }
+  ]
+},
+     "twitter": {
+            "enable": false,
+            "users": {
+                "username": {
+                    "enable": true,
+                    "num": 30,
+                    "include": "",
+                    "exclude": "",
+                    "config": {
+                        "rename": "",
+                        "xxxxxx": ""
+                    },
+                    "push_to": []
+                }
+            }
+        },
+        "repositories": [
+            {
+                "enable": false,
+                "username": "",
+                "repo_name": "",
+                "commits": 3,
+                "exclude": "",
+                "push_to": []
+            }
+        ],
+        "pages": [
+            {
+                "enable": true,
+                "url": "",
+                "include": "",
+                "exclude": "",
+                "config": {
+                    "rename": ""
+                },
+                "push_to": []
+            }
+        ],
+        "scripts": [
+            {
+                "enable": false,
+                "script": "file#function",
+                "params": {
+                    "persist": {
+                        "fileid": ""
+                    },
+                    "any": "xxx",
+                    "config": {
+                        "enable": true,
+                        "liveness": true,
+                        "exclude": "",
+                        "rename": "",
+                        "push_to": []
+                    }
+                }
+            }
+        ]
+    },
+    "groups": {
+        "MyProxies": {
+            "emoji": true,
+            "list": true,
+            "targets": {
+                "clash": "MyClashProfile",
+                "singbox": "MySingboxProfile",
+                "v2ray": "MyV2rayProfile"
+            },
+            "regularize": {
+                "enable": true,
+                "locate": true,
+                "bits": 2
+            }
+        }
+    },
+    "storage": {
+        "engine": "gist",
+        "token": "",
+        "base": "https://api.github.com",
+        "domain": "https://gist.github.com",
+        "items": {
+            "MyClashProfile": {
+                "username": "ma3344",
+                "gistid": "977bb8e693897f402077a6bc792b8509",
+                "filename": "clash.yaml"
+            },
+            "MySingboxProfile": {
+                "username": "ma3344",
+                "gistid": "977bb8e693897f402077a6bc792b8509",
+                "filename": "singbox.json"
+            },
+            "MyV2rayProfile": {
+                "username": "ma3344",
+                "gistid": "977bb8e693897f402077a6bc792b8509",
+                "filename": "v2ray.txt"
+            },
+            "crawledsubs": {
+                "username": "ma3344",
+                "gistid": "977bb8e693897f402077a6bc792b8509",
+                "filename": "crawled-subs.txt"
+            },
+            "crawledproxies": {
+                "username": "ma3344",
+                "gistid": "977bb8e693897f402077a6bc792b8509",
+                "filename": "crawled-proxies.yaml"
+            },
+            "discovered-airports.txt": {
+                "username": "ma3344",
+                "gistid": "977bb8e693897f402077a6bc792b8509",
+                "filename": "discovered-airports.txt"
+            }
+        }
+    }
 }
