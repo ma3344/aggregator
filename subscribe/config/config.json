@@ -93,86 +93,14 @@
             "push_to": []
         },
           "github": {
-  "enable": true,
-  "pages": 20,
-  "push_to": ["MyProxies"],
-  "exclude": "",
-  "spams": [],
-  "repositories": [
-    {
-      "enable": true,
-      "username": "aiboboxx",
-      "repo_name": "clashfree",
-      "commits": 3,
-      "exclude": "",
-      "push_to": ["MyProxies"]
-    },
-    {
-      "enable": true,
-      "username": "freefq",
-      "repo_name": "free",
-      "commits": 3,
-      "exclude": "",
-      "push_to": ["MyProxies"]
-    },
-    {
-      "enable": true,
-      "username": "oslook",
-      "repo_name": "clash-freenode",
-      "commits": 3,
-      "exclude": "",
-      "push_to": ["MyProxies"]
-    },
-    {
-      "enable": true,
-      "username": "Pawdroid",
-      "repo_name": "Free-Servers",
-      "commits": 3,
-      "exclude": "",
-      "push_to": ["MyProxies"]
-    },
-    {
-      "enable": true,
-      "username": "ermaozi",
-      "repo_name": "get_subscribe",
-      "commits": 3,
-      "exclude": "",
-      "push_to": ["MyProxies"]
-    },
-    {
-      "enable": true,
-      "username": "mahdibland",
-      "repo_name": "V2RayAggregator",
-      "commits": 3,
-      "exclude": "",
-      "push_to": ["MyProxies"]
-    },
-    {
-      "enable": true,
-      "username": "vernesong",
-      "repo_name": "OpenClash",
-      "commits": 3,
-      "exclude": "",
-      "push_to": ["MyProxies"]
-    },
-    {
-      "enable": true,
-      "username": "rayxiao",
-      "repo_name": "Free-V2Ray-SSR",
-      "commits": 3,
-      "exclude": "",
-      "push_to": ["MyProxies"]
-    },
-    {
-      "enable": true,
-      "username": "tindy2013",
-      "repo_name": "subconverter",
-      "commits": 3,
-      "exclude": "",
-      "push_to": ["MyProxies"]
-    }
-  ]
-},
+            "enable": true,
+            "pages": 50,
+            "push_to": [
+                "MyProxies"
+            ],
+            "exclude": "",
+            "spams": []
+        },
      "twitter": {
             "enable": false,
             "users": {
@@ -199,18 +127,99 @@
                 "push_to": []
             }
         ],
-        "pages": [
-            {
-                "enable": true,
-                "url": "",
-                "include": "",
-                "exclude": "",
-                "config": {
-                    "rename": ""
-                },
-                "push_to": []
-            }
-        ],
+  "pages": [
+    {
+      "enable": true,
+      "url": "https://github.com/aiboboxx/clashfree",
+      "include": "",
+      "exclude": "",
+      "config": {
+        "rename": ""
+      },
+      "push_to": ["MyProxies"]
+    },
+    {
+      "enable": true,
+      "url": "https://github.com/freefq/free",
+      "include": "",
+      "exclude": "",
+      "config": {
+        "rename": ""
+      },
+      "push_to": ["MyProxies"]
+    },
+    {
+      "enable": true,
+      "url": "https://github.com/oslook/clash-freenode",
+      "include": "",
+      "exclude": "",
+      "config": {
+        "rename": ""
+      },
+      "push_to": ["MyProxies"]
+    },
+    {
+      "enable": true,
+      "url": "https://github.com/Pawdroid/Free-Servers",
+      "include": "",
+      "exclude": "",
+      "config": {
+        "rename": ""
+      },
+      "push_to": ["MyProxies"]
+    },
+    {
+      "enable": true,
+      "url": "https://github.com/ermaozi/get_subscribe",
+      "include": "",
+      "exclude": "",
+      "config": {
+        "rename": ""
+      },
+      "push_to": ["MyProxies"]
+    },
+    {
+      "enable": true,
+      "url": "https://github.com/mahdibland/V2RayAggregator",
+      "include": "",
+      "exclude": "",
+      "config": {
+        "rename": ""
+      },
+      "push_to": ["MyProxies"]
+    },
+    {
+      "enable": true,
+      "url": "https://github.com/vernesong/OpenClash",
+      "include": "",
+      "exclude": "",
+      "config": {
+        "rename": ""
+      },
+      "push_to": ["MyProxies"]
+    },
+    {
+      "enable": true,
+      "url": "https://github.com/rayxiao/Free-V2Ray-SSR",
+      "include": "",
+      "exclude": "",
+      "config": {
+        "rename": ""
+      },
+      "push_to": ["MyProxies"]
+    },
+    {
+      "enable": true,
+      "url": "https://github.com/tindy2013/subconverter",
+      "include": "",
+      "exclude": "",
+      "config": {
+        "rename": ""
+      },
+      "push_to": ["MyProxies"]
+    }
+  ]
+},
         "scripts": [
             {
                 "enable": false,
