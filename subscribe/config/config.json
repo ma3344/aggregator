@@ -3,10 +3,10 @@
     {
       "name": "MyPrivateSub_Placeholder",
       "sub": [
-        "https://example.com/your/private/sub/link"
+        "https://gist.githubusercontent.com/maganghh/efd1ca6f99fde129fc8a637a796a55bd/raw/clash.yaml"
       ],
       "domain": "",
-      "enable": false,
+      "enable": true,
       "rename": "",
       "include": "",
       "exclude": "",
