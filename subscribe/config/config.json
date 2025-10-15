@@ -239,7 +239,7 @@
                 }
             }
         ]
-    },
+    }
     "groups": {
         "MyProxies": {
             "emoji": true,
