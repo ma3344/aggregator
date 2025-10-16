@@ -1563,21 +1563,34 @@ def collect_airport(
         return result
 
     def crawl_jctj(convert: bool = False) -> dict:
-        url = "https://raw.githubusercontent.com/hwanz/SSR-V2ray-Trojan-vpn/main/README.md"
-        content = utils.http_get(url=url)
-        groups = re.findall(r"\[.*\]\((https?:\/\/[^\s\r\n]+)\)[^\r\n]+\d+G.*", content, flags=re.I)
-        if not groups:
+        urls = [
+            "https://raw.githubusercontent.com/hwanz/SSR-V2ray-Trojan-vpn/main/README.md",
+            "https://raw.githubusercontent.com/hwanz/SSR-V2ray-Trojan/refs/heads/main/README.md"
+        ]
+
+        groups_all = []
+        for url in urls:
+            content = utils.http_get(url=url)
+            groups = re.findall(
+                 r"\[.*\]\((https?:\/\/[^\s\r\n]+)\)[^\r\n]*\d+G.*",
+                 content,
+                 flags=re.I
+            )
+            if groups:
+                groups_all.extend(groups)
+
+        if not groups_all:
             return {}
 
         try:
-            tasks = [utils.trim(x).lower() for x in groups if x]
+            tasks = [utils.trim(x).lower() for x in groups_all if x]
             if convert:
                 links = utils.multi_thread_run(func=get_redirect_url, tasks=tasks, num_threads=num_thread)
             else:
                 links = tasks
 
             result = {utils.extract_domain(url=x, include_protocal=True): "" for x in links if x}
-            logger.info(f"[AirPortCollector] finished crawl from [{url}], found {len(result)} domains")
+            logger.info(f"[AirPortCollector] finished crawl from {len(urls)} sources, found {len(result)} domains")
 
             return result
         except:
