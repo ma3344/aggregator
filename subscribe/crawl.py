@@ -1583,14 +1583,14 @@ def collect_airport(
             return {}
 
         try:
-            tasks = [utils.trim(x).lower() for x in groups if x]
+            tasks = [utils.trim(x).lower() for x in groups_all if x]
             if convert:
                 links = utils.multi_thread_run(func=get_redirect_url, tasks=tasks, num_threads=num_thread)
             else:
                 links = tasks
 
             result = {utils.extract_domain(url=x, include_protocal=True): "" for x in links if x}
-            logger.info(f"[AirPortCollector] finished crawl from [{url}], found {len(result)} domains")
+            logger.info(f"[AirPortCollector] finished crawl from {len(urls)} sources, found {len(result)} domains")
 
             return result
         except:
