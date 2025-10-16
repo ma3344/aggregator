@@ -1563,10 +1563,23 @@ def collect_airport(
         return result
 
     def crawl_jctj(convert: bool = False) -> dict:
-        url = "https://raw.githubusercontent.com/hwanz/SSR-V2ray-Trojan-vpn/main/README.md"
-        content = utils.http_get(url=url)
-        groups = re.findall(r"\[.*\]\((https?:\/\/[^\s\r\n]+)\)[^\r\n]+\d+G.*", content, flags=re.I)
-        if not groups:
+        urls = [
+            "https://raw.githubusercontent.com/hwanz/SSR-V2ray-Trojan-vpn/main/README.md",
+            "https://raw.githubusercontent.com/hwanz/SSR-V2ray-Trojan/refs/heads/main/README.md"
+        ]
+
+        groups_all = []
+        for url in urls:
+            content = utils.http_get(url=url)
+            groups = re.findall(
+                 r"\[.*\]\((https?:\/\/[^\s\r\n]+)\)[^\r\n]*\d+G.*",
+                 content,
+                 flags=re.I
+            )
+            if groups:
+                groups_all.extend(groups)
+
+        if not groups_all:
             return {}
 
         try:
