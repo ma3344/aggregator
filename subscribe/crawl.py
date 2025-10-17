@@ -1564,8 +1564,8 @@ def collect_airport(
 
     def crawl_jctj(convert: bool = False) -> dict:
         urls = [
-            "https://raw.githubusercontent.com/hwanz/SSR-V2ray-Trojan-vpn/main/README.md",
-            "https://raw.githubusercontent.com/hwanz/SSR-V2ray-Trojan/refs/heads/main/README.md"
+            "https://gh-proxy.com/raw.githubusercontent.com/hwanz/SSR-V2ray-Trojan-vpn/main/README.md",
+            "https://gh-proxy.com/raw.githubusercontent.com/hwanz/SSR-V2ray-Trojan/refs/heads/main/README.md"
         ]
 
         groups_all = []
