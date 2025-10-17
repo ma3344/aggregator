@@ -1564,8 +1564,8 @@ def collect_airport(
 
     def crawl_jctj(convert: bool = False) -> dict:
         urls = [
-            "https://gh-proxy.com/raw.githubusercontent.com/hwanz/SSR-V2ray-Trojan-vpn/main/README.md",
-            "https://gh-proxy.com/raw.githubusercontent.com/hwanz/SSR-V2ray-Trojan/refs/heads/main/README.md"
+            "https://raw.githubusercontent.com/hwanz/SSR-V2ray-Trojan-vpn/main/README.md",
+            "https://raw.githubusercontent.com/hwanz/SSR-V2ray-Trojan/refs/heads/main/README.md"
         ]
 
         groups_all = []
@@ -1593,8 +1593,8 @@ def collect_airport(
             logger.info(f"[AirPortCollector] finished crawl from {len(urls)} sources, found {len(result)} domains")
 
             return result
-        except:
-            logger.error(f"[AirPortCollector] occur error when crawl from [{url}], message: \n{traceback.format_exc()}")
+        except Exception as e:
+            logger.error(f"[AirPortCollector] occur error when crawl, message:\n{traceback.format_exc()}")
             return {}
 
     def get_redirect_url(url: str, retry: int = 3) -> str:
