@@ -1,20 +1,31 @@
 name: Process
-
 on:
   schedule:
-    - cron: "0 */6 * * *"  # 每 6 小时执行一次
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 env:
+  # time zone
   TZ: Asia/Shanghai
-  GH_TOKEN: ${{ secrets.GH_TOKEN }}       # GitHub Gist Token
-  GH_COOKIE: ${{ secrets.GH_COOKIE }}           # 可选 cookie
-  SUBSCRIBE_CONF: ${{ secrets.SUBSCRIBE_CONF }}
+
+  # token
   PUSH_TOKEN: ${{ secrets.PUSH_TOKEN }}
+  GH_TOKEN: ${{ secrets.GH_TOKEN }} 
+  GH_COOKIE: ${{ secrets.GH_COOKIE }}
+
+  # network reachable
   REACHABLE: ${{ vars.REACHABLE }}
+
+  # not check connective
   SKIP_ALIVE_CHECK: ${{ vars.SKIP_ALIVE_CHECK }}
+
+  # skip remark
   SKIP_REMARK: ${{ vars.SKIP_REMARK }}
+
+  # workflow mode
   WORKFLOW_MODE: ${{ vars.WORKFLOW_MODE }}
+
+  # include spwcial protocols, such vless hysteria2 and hysteria
   ENABLE_SPECIAL_PROTOCOLS: ${{ vars.ENABLE_SPECIAL_PROTOCOLS }}
 
 jobs:
@@ -22,25 +33,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           ref: main
 
-      - name: Setup Python
+      - name: Prepare
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
           architecture: "x64"
           cache: "pip"
 
-      - name: Install dependencies
+      - name: Install
         run: pip3 install -r requirements.txt
 
-      - name: Run process.py
-        run: |
-          echo "Running process.py..."
-          python3 subscribe/process.py -s subscribe/config/config.json -n 32 -t 12000 -f
+      - name: Process
+        run: python -u subscribe/process.py -s subscribe/config/config.json -n 64 -t 12000 -f
 
-      - name: Show timestamp
+      - name: Timestamp
         run: date
