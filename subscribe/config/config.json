@@ -1,184 +1,178 @@
 {
-    "domains": [
-        {
-            "name": "MyPrivateSub_Placeholder",
-            "sub": [
-                "https://example.com/your/private/sub/link"
-            ],
-            "domain": "",
-            "enable": false,
-            "rename": "",
-            "include": "",
-            "exclude": "",
-            "push_to": [
-                "MyProxies"
-            ],
-            "ignorede": true,
-            "liveness": true,
-            "rate": 2.5,
-            "count": 1,
-            "coupon": "",
-            "secure": false,
-            "renew": {
-                "account": [
-                    {
-                        "email": "",
-                        "passwd": "",
-                        "ticket": {
-                            "enable": true,
-                            "autoreset": false,
-                            "subject": "",
-                            "message": "",
-                            "level": 1
-                        }
-                    }
-                ],
-                "plan_id": 3,
-                "package": "",
-                "method": 1,
-                "coupon_code": "",
-                "chatgpt": {
-                    "enable": true,
-                    "regex": "",
-                    "operate": "IN"
-                }
+  "domains": [
+    {
+      "name": "MyPrivateSub_Placeholder",
+      "sub": [
+        "https://example.com/your/private/sub/link"
+      ],
+      "domain": "",
+      "enable": false,
+      "rename": "",
+      "include": "",
+      "exclude": "",
+      "push_to": ["MyProxies"],
+      "ignorede": true,
+      "liveness": true,
+      "rate": 2.5,
+      "count": 1,
+      "coupon": "",
+      "secure": false,
+      "renew": {
+        "account": [
+          {
+            "email": "",
+            "passwd": "",
+            "ticket": {
+              "enable": true,
+              "autoreset": false,
+              "subject": "",
+              "message": "",
+              "level": 1
             }
+          }
+        ],
+        "plan_id": 3,
+        "package": "",
+        "method": 1,
+        "coupon_code": "",
+        "chatgpt": {
+          "enable": true,
+          "regex": "",
+          "operate": "IN"
         }
+      }
+    }
+  ],
+  "crawl": {
+    "enable": true,
+    "exclude": "过期|停用|维护",
+    "threshold": 5,
+    "singlelink": true,
+    "persist": {
+      "subs": "crawledsubs",
+      "proxies": "crawledproxies"
+    },
+    "config": {
+      "rename": "",
+      "include": "",
+      "exclude": "",
+      "xxxxxxx": ""
+    },
+    "airport_discovery": {
+      "enable": true,
+      "channel": "jichang_list",
+      "pages": 40,
+      "rigid": true,
+      "chuck": false,
+      "push_to": ["MyProxies"],
+      "persist": {
+        "domains": "discovered-airports.txt"
+      }
+    },
+    "telegram": {
+      "enable": true,
+      "pages": 40,
+      "exclude": "",
+      "users": {
+        "channel": {
+          "include": "",
+          "exclude": "",
+          "config": {
+            "rename": "",
+            "xxxxxx": ""
+          },
+          "push_to": ["MyProxies"]
+        }
+      }
+    },
+    "google": {
+      "enable": false,
+      "exclude": "",
+      "notinurl": [],
+      "push_to": []
+    },
+    "github": {
+      "enable": true,
+      "pages": 40,
+      "push_to": ["MyProxies"],
+      "exclude": "",
+      "spams": []
+    },
+    "twitter": {
+      "enable": false,
+      "users": {
+        "username": {
+          "enable": true,
+          "num": 30,
+          "include": "",
+          "exclude": "",
+          "config": {
+            "rename": "",
+            "xxxxxx": ""
+          },
+          "push_to": []
+        }
+      }
+    },
+    "repositories": [
+      {
+        "enable": false,
+        "username": "",
+        "repo_name": "",
+        "commits": 3,
+        "exclude": "",
+        "push_to": []
+      }
     ],
-    "crawl": {
+    "pages": [
+      {
         "enable": true,
-        "exclude": "过期|停用|维护",
-        "threshold": 5,
-        "singlelink": true,
-        "persist": {
-            "subs": "crawledsubs",
-            "proxies": "crawledproxies"
-        },
+        "url": "",
+        "include": "",
+        "exclude": "",
         "config": {
+          "rename": ""
+        },
+        "push_to": []
+      }
+    ],
+    "scripts": [
+      {
+        "enable": true,
+        "script": "subscribe/collect.py#main",
+        "params": {
+          "persist": {
+            "fileid": "discovered-airports.txt"
+          },
+          "any": "",
+          "config": {
+            "enable": true,
+            "liveness": true,
+            "exclude": "过期|停用|维护",
             "rename": "",
-            "include": "",
-            "exclude": "",
-            "xxxxxxx": ""
-        },
-        "airport_discovery": {
-            "enable": true,
-            "channel": "jichang_list",
-            "pages": 40,
-            "rigid": true,
-            "chuck": false,
-            "push_to": [
-                "MyProxies"
-            ],
-            "persist": {
-                "domains": "discovered-airports.txt"
-            }
-        },
-        "telegram": {
-            "enable": true,
-            "pages": 40,
-            "exclude": "",
-            "users": {
-                "channel": {
-                    "include": "",
-                    "exclude": "",
-                    "config": {
-                        "rename": "",
-                        "xxxxxx": ""
-                    },
-                    "push_to": [ "MyProxies"]
-                }
-            }
-        },
-        "google": {
-            "enable": false,
-            "exclude": "",
-            "notinurl": [],
-            "push_to": []
-        },
-        "github": {
-            "enable": true,
-            "pages": 40,
-            "push_to": [
-                "MyProxies"
-            ],
-            "exclude": "",
-            "spams": []
-        },
-        "twitter": {
-            "enable": false,
-            "users": {
-                "username": {
-                    "enable": true,
-                    "num": 30,
-                    "include": "",
-                    "exclude": "",
-                    "config": {
-                        "rename": "",
-                        "xxxxxx": ""
-                    },
-                    "push_to": []
-                }
-            }
-        },
-        "repositories": [
-            {
-                "enable": false,
-                "username": "",
-                "repo_name": "",
-                "commits": 3,
-                "exclude": "",
-                "push_to": []
-            }
-        ],
-        "pages": [
-            {
-                "enable": true,
-                "url": "",
-                "include": "",
-                "exclude": "",
-                "config": {
-                    "rename": ""
-                },
-                "push_to": []
-            }
-        ],
-        "scripts": [
-            {
-                "enable": false,
-                "script": "file#function",
-                "params": {
-                    "persist": {
-                        "fileid": ""
-                    },
-                    "any": "xxx",
-                    "config": {
-                        "enable": true,
-                        "liveness": true,
-                        "exclude": "",
-                        "rename": "",
-                        "push_to": []
-                    }
-                }
-            }
-        ]
-    },
-    "groups": {
-        "MyProxies": {
-            "emoji": true,
-            "list": true,
-            "targets": {
-                "clash": "MyClashProfile",
-                "singbox": "MySingboxProfile",
-                "v2ray": "MyV2rayProfile"
-            },
-            "regularize": {
-                "enable": true,
-                "locate": true,
-                "bits": 2
-            }
+            "push_to": ["MyProxies"]
+          }
         }
-    },
-   "storage": {
+      }
+    ]
+  },
+  "groups": {
+    "MyProxies": {
+      "emoji": true,
+      "list": true,
+      "targets": {
+        "clash": "MyClashProfile",
+        "singbox": "MySingboxProfile",
+        "v2ray": "MyV2rayProfile"
+      },
+      "regularize": {
+        "enable": true,
+        "locate": true,
+        "bits": 2
+      }
+    }
+  },
+  "storage": {
     "engine": "gist",
     "token": "",
     "base": "https://api.github.com",
