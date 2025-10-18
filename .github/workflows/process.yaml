@@ -8,7 +8,7 @@ on:
 env:
   TZ: Asia/Shanghai
   GH_TOKEN: ${{ secrets.GH_TOKEN }}       # GitHub Gist Token
-  COOKIE: ${{ secrets.COOKIE }}           # 可选 cookie
+  GH_COOKIE: ${{ secrets.GH_COOKIE }}           # 可选 cookie
   SUBSCRIBE_CONF: ${{ secrets.SUBSCRIBE_CONF }}
   PUSH_TOKEN: ${{ secrets.PUSH_TOKEN }}
   REACHABLE: ${{ vars.REACHABLE }}
