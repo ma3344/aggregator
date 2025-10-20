@@ -49,7 +49,7 @@ jobs:
         run: pip3 install -r requirements.txt
 
       - name: Process
-        run: python -u subscribe/process.py -s subscribe/config/config.json -n 64 -t 12000 -f
+        run: python -u subscribe/process.py -s subscribe/config/config.json -n 32 -t 12000 -f
 
       - name: Timestamp
         run: date
